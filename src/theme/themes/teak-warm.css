@@ -1,0 +1,83 @@
+/**
+ * Brisova theme — Teak Warm
+ * Warm teak wood tones with amber brass
+ */
+[data-theme="teak-warm"] {
+  color-scheme: light;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --bg-app: #f3ebe3;
+  --bg-elevated: #faf5ef;
+  --bg-surface: #faf5ef;
+  --bg-card: rgba(250, 245, 239, 0.82);
+  --bg-card-solid: #faf5ef;
+  --bg-card-soft: rgba(250, 245, 239, 0.68);
+  --bg-input: #faf5ef;
+
+  --border: rgba(58, 44, 34, 0.1);
+  --border-strong: rgba(58, 44, 34, 0.16);
+  --border-accent: rgba(184, 136, 88, 0.45);
+
+  --text-primary: #261c14;
+  --text-secondary: #564436;
+  --text-muted: #82685a;
+  --text-on-accent: #fffdf8;
+
+  --accent: #6e4a32;
+  --accent-hover: #573928;
+  --accent-dim: rgba(110, 74, 50, 0.1);
+  --accent-secondary: #d0a878;
+  --accent-brass: #b88858;
+  --success: #6e4a32;
+  --warning: #b88858;
+  --danger: #a3443c;
+
+  --gradient-primary: linear-gradient(135deg, #b88858 0%, #906a45 78%);
+  --gradient-soft: linear-gradient(
+    145deg,
+    rgba(184, 136, 88, 0.12) 0%,
+    rgba(110, 74, 50, 0.08) 100%
+  );
+  --gradient-hero: radial-gradient(
+      40rem 26rem at 8% -10%,
+      rgba(208, 168, 120, 0.2),
+      transparent 64%
+    ),
+    radial-gradient(
+      34rem 22rem at 96% 4%,
+      rgba(110, 74, 50, 0.1),
+      transparent 58%
+    ),
+    var(--bg-app);
+
+  --shadow-sm: 0 1px 2px rgba(58, 44, 34, 0.04), 0 10px 28px rgba(58, 44, 34, 0.04);
+  --shadow-md: 0 14px 40px rgba(58, 44, 34, 0.07);
+  --shadow-lg: 0 30px 70px rgba(58, 44, 34, 0.09);
+  --shadow-glow: 0 0 0 1px rgba(184, 136, 88, 0.2), 0 18px 42px rgba(58, 44, 34, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --background: 28 36% 92%;
+  --foreground: 24 30% 11%;
+  --card: 32 50% 96%;
+  --card-foreground: 24 30% 11%;
+  --primary: 22 38% 31%;
+  --primary-foreground: 32 50% 96%;
+  --secondary: 30 42% 53%;
+  --secondary-foreground: 24 30% 11%;
+  --muted: 28 26% 91%;
+  --muted-foreground: 22 18% 43%;
+  --accent-hsl: 22 38% 31%;
+  --border-hsl: 28 18% 80%;
+  --radius: 0.75rem;
+}

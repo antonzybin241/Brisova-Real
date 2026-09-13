@@ -1,0 +1,24 @@
+/* Brisova theme — font stacks */
+
+:root {
+  --brisova-font-display: "Syne", "Segoe UI", sans-serif;
+  --brisova-font-sans: "Manrope", "Segoe UI", sans-serif;
+  --brisova-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+body {
+  font-family: var(--brisova-font-sans);
+}
+
+h1,
+h2,
+h3,
+.brisova-font-display {
+  font-family: var(--brisova-font-display);
+}
+
+code,
+pre,
+.brisova-font-mono {
+  font-family: var(--brisova-font-mono);
+}

@@ -1,0 +1,64 @@
+/* Brisova responsive adjustments */
+
+@media (max-width: 991px) {
+  .brisova-brand-mark span {
+    font-size: 0.95rem;
+  }
+
+  .brisova-chain-select {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brisova-page {
+    padding-bottom: 2rem;
+  }
+
+  .brisova-page-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .brisova-detail-sidebar {
+    position: static;
+  }
+
+  .brisova-property-card__stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .brisova-filters {
+    padding: 1rem;
+  }
+
+  .brisova-admin-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brisova-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.25rem;
+  }
+
+  .wallet_button {
+    font-size: 0.8rem !important;
+    padding: 0.45rem 0.85rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .brisova-brand-mark small {
+    display: none;
+  }
+
+  .brisova-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brisova-pagination {
+    flex-wrap: wrap;
+  }
+}

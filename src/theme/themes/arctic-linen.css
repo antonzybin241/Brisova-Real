@@ -1,0 +1,83 @@
+/**
+ * Brisova theme — Arctic Linen
+ * Crisp arctic white with icy teal accent
+ */
+[data-theme="arctic-linen"] {
+  color-scheme: light;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --bg-app: #eef3f5;
+  --bg-elevated: #f8fbfc;
+  --bg-surface: #f8fbfc;
+  --bg-card: rgba(248, 251, 252, 0.82);
+  --bg-card-solid: #f8fbfc;
+  --bg-card-soft: rgba(248, 251, 252, 0.68);
+  --bg-input: #f8fbfc;
+
+  --border: rgba(36, 48, 56, 0.1);
+  --border-strong: rgba(36, 48, 56, 0.16);
+  --border-accent: rgba(95, 151, 160, 0.45);
+
+  --text-primary: #172228;
+  --text-secondary: #3d4f58;
+  --text-muted: #6a7c86;
+  --text-on-accent: #fffdf8;
+
+  --accent: #2a6b73;
+  --accent-hover: #20555c;
+  --accent-dim: rgba(42, 107, 115, 0.1);
+  --accent-secondary: #86b4bb;
+  --accent-brass: #5f97a0;
+  --success: #2a6b73;
+  --warning: #5f97a0;
+  --danger: #a1444c;
+
+  --gradient-primary: linear-gradient(135deg, #5f97a0 0%, #4a767d 78%);
+  --gradient-soft: linear-gradient(
+    145deg,
+    rgba(95, 151, 160, 0.12) 0%,
+    rgba(42, 107, 115, 0.08) 100%
+  );
+  --gradient-hero: radial-gradient(
+      40rem 26rem at 8% -10%,
+      rgba(134, 180, 187, 0.2),
+      transparent 64%
+    ),
+    radial-gradient(
+      34rem 22rem at 96% 4%,
+      rgba(42, 107, 115, 0.1),
+      transparent 58%
+    ),
+    var(--bg-app);
+
+  --shadow-sm: 0 1px 2px rgba(36, 48, 56, 0.04), 0 10px 28px rgba(36, 48, 56, 0.04);
+  --shadow-md: 0 14px 40px rgba(36, 48, 56, 0.07);
+  --shadow-lg: 0 30px 70px rgba(36, 48, 56, 0.09);
+  --shadow-glow: 0 0 0 1px rgba(95, 151, 160, 0.2), 0 18px 42px rgba(36, 48, 56, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --background: 195 28% 95%;
+  --foreground: 200 26% 12%;
+  --card: 190 40% 98%;
+  --card-foreground: 200 26% 12%;
+  --primary: 186 46% 31%;
+  --primary-foreground: 190 40% 98%;
+  --secondary: 188 26% 50%;
+  --secondary-foreground: 200 26% 12%;
+  --muted: 195 18% 92%;
+  --muted-foreground: 200 12% 47%;
+  --accent-hsl: 186 46% 31%;
+  --border-hsl: 195 14% 82%;
+  --radius: 0.75rem;
+}

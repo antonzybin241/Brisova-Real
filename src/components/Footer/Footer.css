@@ -1,0 +1,37 @@
+.Main_footer_bg {
+  padding: 4.25rem 1rem 2.5rem;
+  background: var(--bg-app);
+  border-top: 1px solid var(--border);
+}
+
+.footer_heading {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.footer_copy {
+  color: var(--text-secondary);
+}
+
+.footer_links {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  display: block;
+  margin: 0.45rem 0;
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+
+.footer_links:hover {
+  color: var(--accent);
+}
+
+.site_font {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}

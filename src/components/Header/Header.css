@@ -1,0 +1,132 @@
+.main_header_here {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 253, 248, 0.78);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+}
+
+.main_headre {
+  background-color: transparent !important;
+  margin-top: 0;
+  padding: 0.7rem 0 !important;
+}
+
+.main_logo {
+  width: auto;
+  max-width: 300px;
+}
+
+.header_links {
+  color: var(--text-muted) !important;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 2px;
+  white-space: nowrap !important;
+  border-radius: var(--radius-pill);
+  transition: color var(--transition), background var(--transition);
+}
+
+.header_links:hover,
+.header_links a:hover {
+  color: var(--accent) !important;
+  background: var(--accent-dim);
+}
+
+.header_links--active,
+.header_links--active a,
+.header_links--active.header_links {
+  color: var(--accent) !important;
+  font-weight: 700;
+  background: var(--accent-dim);
+  box-shadow: inset 0 -2px 0 var(--accent-brass);
+}
+
+.navbar-nav .nav-link {
+  padding: 0.45rem 0.75rem !important;
+}
+
+.wallet_button {
+  color: var(--text-on-accent) !important;
+  background: var(--gradient-primary);
+  border: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  padding: 8px 16px !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 22px rgba(138, 103, 56, 0.22);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.wallet_button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  color: var(--text-on-accent) !important;
+}
+
+.wallet_button2 {
+  background: var(--accent-dim);
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-pill);
+  color: var(--accent) !important;
+  border: 1px solid var(--border-accent);
+  padding: 8px 14px !important;
+}
+
+.in_resonsive {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: auto;
+  margin-left: auto;
+}
+
+.header-menu-toggle {
+  color: var(--text-primary);
+  font-size: 1.35rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .header_links {
+    text-align: center !important;
+  }
+  .main_logo .site-logo,
+  .brisova-brand-mark img {
+    height: 36px;
+    width: 36px;
+    max-width: 36px;
+  }
+}
+
+@media (max-width: 800px) {
+  .wallet_button {
+    display: none;
+  }
+  .brisova-chain-select {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .wallet_button2 {
+    display: none;
+  }
+}

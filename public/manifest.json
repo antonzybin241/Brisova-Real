@@ -1,0 +1,15 @@
+{
+  "short_name": "Brisova",
+  "name": "Brisova Markets",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f6f1e9",
+  "background_color": "#f6f1e9"
+}

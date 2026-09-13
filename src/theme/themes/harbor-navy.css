@@ -1,0 +1,83 @@
+/**
+ * Brisova theme — Harbor Navy
+ * Coastal navy with cool linen and steel blue
+ */
+[data-theme="harbor-navy"] {
+  color-scheme: light;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --bg-app: #eef2f6;
+  --bg-elevated: #f8fafc;
+  --bg-surface: #f8fafc;
+  --bg-card: rgba(248, 250, 252, 0.82);
+  --bg-card-solid: #f8fafc;
+  --bg-card-soft: rgba(248, 250, 252, 0.68);
+  --bg-input: #f8fafc;
+
+  --border: rgba(26, 36, 51, 0.1);
+  --border-strong: rgba(26, 36, 51, 0.16);
+  --border-accent: rgba(107, 140, 174, 0.45);
+
+  --text-primary: #152033;
+  --text-secondary: #3a4658;
+  --text-muted: #6b7789;
+  --text-on-accent: #fffdf8;
+
+  --accent: #1f3a5f;
+  --accent-hover: #162a46;
+  --accent-dim: rgba(31, 58, 95, 0.1);
+  --accent-secondary: #8fa6c4;
+  --accent-brass: #6b8cae;
+  --success: #1f3a5f;
+  --warning: #6b8cae;
+  --danger: #a13d45;
+
+  --gradient-primary: linear-gradient(135deg, #6b8cae 0%, #536d88 78%);
+  --gradient-soft: linear-gradient(
+    145deg,
+    rgba(107, 140, 174, 0.12) 0%,
+    rgba(31, 58, 95, 0.08) 100%
+  );
+  --gradient-hero: radial-gradient(
+      40rem 26rem at 8% -10%,
+      rgba(143, 166, 196, 0.2),
+      transparent 64%
+    ),
+    radial-gradient(
+      34rem 22rem at 96% 4%,
+      rgba(31, 58, 95, 0.1),
+      transparent 58%
+    ),
+    var(--bg-app);
+
+  --shadow-sm: 0 1px 2px rgba(26, 36, 51, 0.04), 0 10px 28px rgba(26, 36, 51, 0.04);
+  --shadow-md: 0 14px 40px rgba(26, 36, 51, 0.07);
+  --shadow-lg: 0 30px 70px rgba(26, 36, 51, 0.09);
+  --shadow-glow: 0 0 0 1px rgba(107, 140, 174, 0.2), 0 18px 42px rgba(26, 36, 51, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --background: 214 28% 95%;
+  --foreground: 218 36% 14%;
+  --card: 210 40% 98%;
+  --card-foreground: 218 36% 14%;
+  --primary: 214 51% 25%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 214 28% 55%;
+  --secondary-foreground: 218 36% 14%;
+  --muted: 214 22% 92%;
+  --muted-foreground: 215 12% 48%;
+  --accent-hsl: 214 51% 25%;
+  --border-hsl: 214 18% 82%;
+  --radius: 0.75rem;
+}

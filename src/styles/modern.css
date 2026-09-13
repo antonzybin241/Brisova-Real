@@ -1,0 +1,154 @@
+/* Brisova elegant shell */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(176, 138, 90, 0.22);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans) !important;
+  background: var(--bg-app) !important;
+  color: var(--text-primary) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden !important;
+  letter-spacing: 0.01em;
+}
+
+.App {
+  background: var(--gradient-hero);
+  min-height: 100vh;
+  position: relative;
+}
+
+.App::before,
+.App::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.App::before {
+  inset: 0;
+  opacity: 0.45;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.35), transparent 42%);
+}
+
+.App::after {
+  width: 36rem;
+  height: 36rem;
+  top: -12rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(196, 165, 116, 0.16), transparent 70%);
+  filter: blur(8px);
+}
+
+.App > * {
+  position: relative;
+  z-index: 1;
+}
+
+.App.app-modern {
+  isolation: isolate;
+}
+
+.site_font,
+.txt_clr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display) !important;
+  letter-spacing: 0.01em;
+}
+
+p,
+label {
+  font-family: var(--font-sans) !important;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-white {
+  color: var(--text-primary) !important;
+}
+
+.text-white-50 {
+  color: var(--text-muted) !important;
+}
+
+.form-control,
+.form-select {
+  background: var(--bg-input) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  border-radius: var(--radius-md) !important;
+  min-height: 2.9rem;
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent-brass) !important;
+  box-shadow: 0 0 0 3px rgba(176, 138, 90, 0.16) !important;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.7;
+}
+
+.form-select option {
+  background: var(--bg-surface);
+  color: var(--text-primary);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(62, 48, 32, 0.16);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-brass);
+  background-clip: padding-box;
+}

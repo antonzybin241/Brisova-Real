@@ -1,0 +1,83 @@
+/**
+ * Brisova theme — Cedar Forest
+ * Deep cedar green on misted moss linen
+ */
+[data-theme="cedar-forest"] {
+  color-scheme: light;
+
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Manrope", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --bg-app: #eef3ee;
+  --bg-elevated: #f7faf7;
+  --bg-surface: #f7faf7;
+  --bg-card: rgba(247, 250, 247, 0.82);
+  --bg-card-solid: #f7faf7;
+  --bg-card-soft: rgba(247, 250, 247, 0.68);
+  --bg-input: #f7faf7;
+
+  --border: rgba(36, 48, 40, 0.1);
+  --border-strong: rgba(36, 48, 40, 0.16);
+  --border-accent: rgba(122, 154, 110, 0.45);
+
+  --text-primary: #1a221b;
+  --text-secondary: #3f4d41;
+  --text-muted: #6c7a6e;
+  --text-on-accent: #fffdf8;
+
+  --accent: #2f5a3c;
+  --accent-hover: #23462e;
+  --accent-dim: rgba(47, 90, 60, 0.1);
+  --accent-secondary: #9bb58f;
+  --accent-brass: #7a9a6e;
+  --success: #2f5a3c;
+  --warning: #7a9a6e;
+  --danger: #a34840;
+
+  --gradient-primary: linear-gradient(135deg, #7a9a6e 0%, #5f7856 78%);
+  --gradient-soft: linear-gradient(
+    145deg,
+    rgba(122, 154, 110, 0.12) 0%,
+    rgba(47, 90, 60, 0.08) 100%
+  );
+  --gradient-hero: radial-gradient(
+      40rem 26rem at 8% -10%,
+      rgba(155, 181, 143, 0.2),
+      transparent 64%
+    ),
+    radial-gradient(
+      34rem 22rem at 96% 4%,
+      rgba(47, 90, 60, 0.1),
+      transparent 58%
+    ),
+    var(--bg-app);
+
+  --shadow-sm: 0 1px 2px rgba(36, 48, 40, 0.04), 0 10px 28px rgba(36, 48, 40, 0.04);
+  --shadow-md: 0 14px 40px rgba(36, 48, 40, 0.07);
+  --shadow-lg: 0 30px 70px rgba(36, 48, 40, 0.09);
+  --shadow-glow: 0 0 0 1px rgba(122, 154, 110, 0.2), 0 18px 42px rgba(36, 48, 40, 0.08);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --background: 120 18% 94%;
+  --foreground: 130 14% 12%;
+  --card: 120 25% 97%;
+  --card-foreground: 130 14% 12%;
+  --primary: 140 32% 27%;
+  --primary-foreground: 120 25% 97%;
+  --secondary: 100 18% 52%;
+  --secondary-foreground: 130 14% 12%;
+  --muted: 120 14% 92%;
+  --muted-foreground: 125 8% 45%;
+  --accent-hsl: 140 32% 27%;
+  --border-hsl: 120 12% 82%;
+  --radius: 0.75rem;
+}

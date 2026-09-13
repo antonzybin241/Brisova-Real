@@ -1,0 +1,110 @@
+{
+  "name": "brisova",
+  "version": "1.0.4",
+  "private": true,
+  "description": "Brisova Markets. Tokenized and fractional property investing on Ethereum.",
+  "author": "Brisova",
+  "license": "UNLICENSED",
+  "homepage": ".",
+  "workspaces": [
+    "backend",
+    "contracts"
+  ],
+  "keywords": [
+    "brisova",
+    "real-estate",
+    "web3",
+    "tokenization",
+    "ethereum",
+    "marketplace",
+    "fractional-ownership"
+  ],
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "setup": "npm install && npm run db:seed",
+    "dev": "concurrently -k -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:api\"",
+    "dev:web": "cross-env GENERATE_SOURCEMAP=false PORT=3000 BROWSER=none react-app-rewired start",
+    "dev:api": "cross-env NODE_ENV=development API_PORT=3344 PORT=3344 node --watch-path=backend/src --watch backend/src/server.js",
+    "build": "cross-env CI=true GENERATE_SOURCEMAP=false NODE_OPTIONS=--max-old-space-size=4096 react-app-rewired build",
+    "start": "cross-env NODE_ENV=production node backend/src/server.js",
+    "start:api": "cross-env NODE_ENV=production API_PORT=3344 node backend/src/server.js",
+    "start:web": "serve -s build -l 3000",
+    "preview": "npm run build && concurrently -k -n web,api -c cyan,magenta \"npm:start:web\" \"npm:start:api\"",
+    "postinstall": "npm run db:seed -w brisova-api --if-present",
+    "test": "cross-env CI=true react-app-rewired test --watchAll=false",
+    "test:smoke": "node backend/tests/smoke.test.js",
+    "db:seed": "npm run db:seed -w brisova-api",
+    "contracts:compile": "npm run compile -w @brisova/contracts",
+    "contracts:test": "npm run test -w @brisova/contracts"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.0",
+    "@web3modal/core": "^3.5.6",
+    "@web3modal/wagmi": "^3.5.6",
+    "assert": "^2.1.0",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.2",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.2",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.0.1",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "recharts": "^2.14.0",
+    "serve": "^14.2.6",
+    "stream-browserify": "^3.0.0",
+    "url": "^0.11.4",
+    "util": "^0.12.5",
+    "viem": "^1.21.4",
+    "vm-browserify": "^1.1.2",
+    "wagmi": "^1.4.13",
+    "web-vitals": "^2.1.4",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.5.4",
+    "react-app-rewired": "^2.2.1",
+    "tailwindcss": "^3.4.17",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "4.9.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "react/jsx-pascal-case": "off"
+    }
+  },
+  "overrides": {
+    "typescript": "4.9.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

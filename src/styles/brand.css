@@ -1,0 +1,29 @@
+/* Brisova brand logo sizing */
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.site-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: min(200px, 70vw);
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 576px) {
+  .site-logo {
+    height: 34px;
+    max-width: min(160px, 60vw);
+  }
+}
+
+.footer-brand .site-logo {
+  height: 40px;
+  max-width: 180px;
+}

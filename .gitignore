@@ -1,0 +1,10 @@
+node_modules
+build
+.env
+.env.local
+.env.development.local
+backend/.env
+public/static
+backend/data/store.json
+backend/prisma/dev.db
+package-lock.json
