@@ -7,7 +7,6 @@
   "license": "UNLICENSED",
   "homepage": ".",
   "workspaces": [
-    "backend",
     "contracts"
   ],
   "keywords": [
@@ -24,19 +23,14 @@
     "npm": ">=10.0.0"
   },
   "scripts": {
-    "setup": "npm install && npm run db:seed",
-    "dev": "concurrently -k -n web,api -c cyan,magenta \"npm:dev:web\" \"npm:dev:api\"",
-    "dev:web": "cross-env GENERATE_SOURCEMAP=false PORT=3000 BROWSER=none react-app-rewired start",
-    "dev:api": "cross-env NODE_ENV=development API_PORT=3344 PORT=3344 node --watch-path=backend/src --watch backend/src/server.js",
+    "setup": "npm install",
+    "dev": "cross-env GENERATE_SOURCEMAP=false PORT=3000 BROWSER=none react-app-rewired start",
+    "dev:web": "npm run dev",
     "build": "cross-env CI=true GENERATE_SOURCEMAP=false NODE_OPTIONS=--max-old-space-size=4096 react-app-rewired build",
-    "start": "cross-env NODE_ENV=production node backend/src/server.js",
-    "start:api": "cross-env NODE_ENV=production API_PORT=3344 node backend/src/server.js",
-    "start:web": "serve -s build -l 3000",
-    "preview": "npm run build && concurrently -k -n web,api -c cyan,magenta \"npm:start:web\" \"npm:start:api\"",
-    "postinstall": "npm run db:seed -w brisova-api --if-present",
+    "start": "serve -s build -l 3000",
+    "start:web": "npm run start",
+    "preview": "npm run build && npm run start",
     "test": "cross-env CI=true react-app-rewired test --watchAll=false",
-    "test:smoke": "node backend/tests/smoke.test.js",
-    "db:seed": "npm run db:seed -w brisova-api",
     "contracts:compile": "npm run compile -w @brisova/contracts",
     "contracts:test": "npm run test -w @brisova/contracts"
   },
@@ -45,7 +39,6 @@
     "@web3modal/core": "^3.5.6",
     "@web3modal/wagmi": "^3.5.6",
     "assert": "^2.1.0",
-    "axios": "^1.6.8",
     "bootstrap": "^5.3.2",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.1",
@@ -75,7 +68,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.21",
-    "concurrently": "^9.2.1",
     "cross-env": "^7.0.3",
     "postcss": "^8.5.4",
     "react-app-rewired": "^2.2.1",
@@ -88,6 +80,9 @@
       "react-app",
       "react-app/jest"
     ],
+    "globals": {
+      "BigInt": "readonly"
+    },
     "rules": {
       "react/jsx-pascal-case": "off"
     }
